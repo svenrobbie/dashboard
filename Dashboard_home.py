@@ -153,11 +153,11 @@ def homepage():
         if uploaded_file is not None:
             try: 
                 initialize_data(uploaded_file)
+                
                 st.success("✅ Data succesvol geladen!")
             except:
                 st.error("❌ Er is iets misgegaan bij het laden van het bestand. Controleer of het bestand het juiste formaat heeft.")
-        else:
-            if initialize_data():
+                initialize_data()
                 st.info("ℹ️ Standaard voorbeelddata geladen. Upload uw eigen data voor persoonlijke analyse.")
     
     # Hoofdinhoud
